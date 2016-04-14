@@ -148,9 +148,9 @@ function mcwh_action_webhook() {
 		switch($_POST['type']){
 			case 'subscribe'  : mcwh_subscribe($_POST['data'], $_POST['fired_at']);   break;
 			//case 'unsubscribe': mcwh_unsubscribe($_POST['data']); break;
-			case 'cleaned'    : mcwh_cleaned($_POST['data']);     break;
-			case 'upemail'    : mcwh_upemail($_POST['data']);     break;
-			case 'profile'    : mcwh_profile($_POST['data']);     break;
+			case 'cleaned'    : mcwh_cleaned($_POST['data']);     					  break;
+			case 'upemail'    : mcwh_upemail($_POST['data']);    					  break;
+			case 'profile'    : mcwh_subscribe($_POST['data'], $_POST['fired_at']);   break;
 			default:
 				mcwh_log('Request type "'.$_POST['type'].'" unknown, ignoring.');
 		}
